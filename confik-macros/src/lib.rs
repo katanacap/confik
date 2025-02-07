@@ -923,16 +923,14 @@ fn derive_macro_builder_inner(target_struct: &DeriveInput) -> syn::Result<proc_m
 
     let full_derive = quote! {
         #overall_lint_overrides
-        const _: () = {
-            #impl_lint_overrides
-            #target_impl
-
-            #struct_lint_overrides
-            #builder_struct
-
-            #impl_lint_overrides
-            #builder_impl
-        };
+        #impl_lint_overrides
+        #target_impl
+    
+        #struct_lint_overrides
+        #builder_struct
+    
+        #impl_lint_overrides
+        #builder_impl
     };
 
     Ok(full_derive.into())
