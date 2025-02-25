@@ -1,4 +1,4 @@
-# `confik`
+# `katana-confik`
 
 <!-- prettier-ignore-start -->
 
